@@ -14,7 +14,7 @@
 - [ ] Amenities density (to determine if more are needed or not and how many to upgrade)
 - [ ] Quantum of landuse classes (to locate spaces for new developments e.g an informal space for a licenced market bazaar)
 - [ ] Airport (some one please comment about this)
-- [ ] Buildings: total and density (this will help with showing which buildins to remove from the town core for example)
+- [ ] Buildings: total and density (this will help with showing which buildings to remove from the town core for example)
 - [ ] Population (specify and document how you determined the population size and how you plan to increase it by 30%)
 - [ ] document suggestions on how all the above can be solved
 
