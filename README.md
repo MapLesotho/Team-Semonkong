@@ -19,4 +19,4 @@
 - [ ] document suggestions on how all the above can be solved
 
 ### Other requirements
-- [ ] detail what day osm data is extracted, a list of commands. (similar results for everyone)
+- [ ] detail what day osm data is extracted and a list of commands for each member. (similar results for everyone)
