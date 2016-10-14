@@ -11,7 +11,7 @@
 - [ ] Road  lengths: both by total and by classefication (to assist in the priority of which roads to improve)
 - [ ] Buffer farmlands (to make sure we don't impact on farmlands as we facilitate population expansion)
 - [ ] Amenities: the total number and the breakdown of the different types (for upgrading amenities upto tourism standards)
-- [ ] Amenities density (to determine if more are needed or not and how many to uprade)
+- [ ] Amenities density (to determine if more are needed or not and how many to upgrade)
 - [ ] Quantum of landuse classes (to locate spaces for new developments e.g an informal space for a licenced market bazaar)
 - [ ] Airport (some one please comment about this)
 - [ ] Buildings: total and density (this will help with showing which buildins to remove from the town core for example)
