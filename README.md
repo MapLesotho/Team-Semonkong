@@ -1,5 +1,5 @@
 
-### Made a list of tasks for completion of a Semonkong Project
+### A list of tasks for completion of a Semonkong Project
 
 - [ ] Create a team 
 - [x] create semonkong's repo where all the project material will be stored and add a team as collaborators
