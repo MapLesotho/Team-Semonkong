@@ -8,7 +8,7 @@
 
 ###  For Planning Issues of the town
 
-- [ ] Road  lengths: both by total and by classefication (to assist in the priority of which roads to improve)
+- [ ] Road  lengths: both by total and by classification (to assist in the priority of which roads to improve)
 - [ ] Buffer farmlands (to make sure we don't impact on farmlands as we facilitate population expansion)
 - [ ] Amenities: the total number and the breakdown of the different types (for upgrading amenities upto tourism standards)
 - [ ] Amenities density (to determine if more are needed or not and how many to upgrade)
