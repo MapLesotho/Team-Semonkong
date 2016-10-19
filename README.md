@@ -1,7 +1,7 @@
 
 ### A list of tasks for completion of a Semonkong Project
 
-- [ ] Create a team 
+- [x] Create a team 
 - [x] create semonkong's repo where all the project material will be stored and add a team as collaborators
 - [x] A location map showing the extent of the project area
 - [ ] The size of the project area in hectares / sqm
