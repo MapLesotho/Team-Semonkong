@@ -149,57 +149,62 @@ GROUP BY building
 ## Results for large area
 
 
-Buildings:
+**Buildings:**
 
-type; count;total_sqm;average_sqm
-"house";222;12490;56
-"shed";12;306;25
-"ruin";2;45;22
-"ruins";137;3667;27
-"yes";3994;315141;79
-"construction";267;16603;62
-"hut";6968;246791;35
-"residential";6;444;74
-"huts";4;74;18
-"industrial";1;328;328
+|type|  count| total_sqm| average_sqm|
+|----|----:|----:|----:|
+|"house"| 222| 12490| 56|
+|"shed"| 12| 306| 25|
+|"ruin"| 2| 45| 22|
+|"ruins"| 137| 3667| 27|
+|"yes"| 3994| 315141| 79|
+|"construction"| 267| 16603| 62|
+|"hut"| 6968| 246791| 35|
+|"residential"| 6| 444| 74|
+|"huts"| 4| 74| 18|
+|"industrial"| 1| 328| 328|
 
 
 ## Results for Inner Area
 
-Landuse (ha)
+**Landuse (ha)**
 
-type; area
-"cemetery";1.118
-"quarry";0.836
-"industrial";2.557
-"farmland";12299.531
-"farmyard";1.900
-"construction";1.887
-"residential";2170.163
-"forest";61.253
+|type| area|
+|----|----:|
+|"cemetery"|1.118|
+|"quarry"|0.836|
+|"industrial"|2.557|
+|"farmland"|12299.531|
+|"farmyard"|1.900|
+|"construction"|1.887|
+|"residential"|2170.163|
+|"forest"|61.253|
 
 
-Roads (km)
+**Roads (km)**
 
-type; length
-"unclassified";25.41
-"secondary";49.87
-"track";507.95
-"service";4.95
-"path";672.86
-"tertiary";114.14
-"construction";0.02
-"residential";131.33
+|type| length|
+|----|----:|
+|"unclassified"|25.41|
+|"secondary"|49.87|
+|"track"|507.95|
+|"service"|4.95|
+|"path"|672.86|
+|"tertiary"|114.14|
+|"construction"|0.02|
+|"residential"|131.33|
 
-Buildings:
-type;count;total_sqm;average_sqm
-"house";222;12490;56
-"shed";12;306;25
-"ruin";2;45;22
-"ruins";137;3667;27
-"yes";3994;315141;79
-"construction";267;16603;62
-"hut";6968;246791;35
-"residential";6;444;74
-"huts";4;74;18
-"industrial";1;328;328
+**Buildings:**
+
+|type|count|total_sqm|average_sqm|
+|----|----:|----:|----:|
+|"house"|222|12490|56|
+|"shed"|12|306|25|
+|"ruin"|2|45|22|
+|"ruins"|137|3667|27|
+|"yes"|3994|315141|79|
+|"construction"|267|16603|62|
+|"hut"|6968|246791|35|
+|"residential"|6|444|74|
+|"huts"|4|74|18|
+|"industrial"|1|328|328|
