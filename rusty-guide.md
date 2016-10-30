@@ -98,10 +98,10 @@ GROUP BY landuse
 
 ```
 -- filter out those within the semo-area-inner
-SELECT ol.landuse, 
+SELECT ol.landuse, count(landuse), 
     round((sum(ST_Area(ol.way))/10000)::numeric, 3) as hectares 
 from semo_polys as ol
-where ol.landuse IS NOT NULL AND ST_Intersects(ol.way, (select the_geom from semo_area1 where semo_area1.id = 2))
+where ol.landuse IS NOT NULL AND ST_Intersects(ol.way, (select the_geom from semo_area1 where semo_area1.id = 3))
 GROUP BY landuse
 ```
 
@@ -120,7 +120,7 @@ GROUP BY highway
 SELECT highway, 
     round(SUM(ST_Length(way)/1000)::numeric, 2) as km 
 from semo_lines as ol
-where highway IS NOT NULL AND ST_Intersects(ol.way, (select the_geom from semo_area1 where semo_area1.id = 2))
+where highway IS NOT NULL AND ST_Intersects(ol.way, (select the_geom from semo_area1 where semo_area1.id = 3))
 GROUP BY highway
 ```
 
@@ -143,68 +143,89 @@ SELECT building,
     round(AVG(ST_Area(way))::numeric, 0) as average_sqm
 from semo_polys as ol
 where building IS NOT NULL 
-AND ST_Intersects(ol.way, (select the_geom from semo_area1 where semo_area1.id = 2))
+AND ST_Intersects(ol.way, (select the_geom from semo_area1 where semo_area1.id = 3))
 GROUP BY building
 ```
 ## Results for large area
 
+**landuse**
+| type           | count | area (ha) | 
+|----------------|-------|-----------| 
+| "cemetery"     | 4     | 1.118     | 
+| "quarry"       | 2     | 0.836     | 
+| "industrial"   | 1     | 2.557     | 
+| "farmland"     | 2476  | 12299.531 | 
+| "farmyard"     | 33    | 1.900     | 
+| "construction" | 1     | 1.887     | 
+| "residential"  | 443   | 2170.163  | 
+| "forest"       | 28    | 61.253    | 
+
+**Roads (km)**
+| type           | length (km) | 
+|----------------|-------------| 
+| "unclassified" | 25.41       | 
+| "secondary"    | 49.87       | 
+| "track"        | 507.95      | 
+| "service"      | 4.95        | 
+| "path"         | 672.86      | 
+| "tertiary"     | 114.14      | 
+| "construction" | 0.02        | 
+| "residential"  | 131.33      | 
+
 
 **Buildings:**
 
-|type|  count| total_sqm| average_sqm|
-|----|----:|----:|----:|
-|"house"| 222| 12490| 56|
-|"shed"| 12| 306| 25|
-|"ruin"| 2| 45| 22|
-|"ruins"| 137| 3667| 27|
-|"yes"| 3994| 315141| 79|
-|"construction"| 267| 16603| 62|
-|"hut"| 6968| 246791| 35|
-|"residential"| 6| 444| 74|
-|"huts"| 4| 74| 18|
-|"industrial"| 1| 328| 328|
+| type           | count | total_sqm | average_sqm | 
+|----------------|-------|-----------|-------------| 
+| "house"        | 222   | 12490     | 56          | 
+| "shed"         | 12    | 306       | 25          | 
+| "ruin"         | 2     | 45        | 22          | 
+| "ruins"        | 137   | 3667      | 27          | 
+| "yes"          | 3994  | 315141    | 79          | 
+| "construction" | 267   | 16603     | 62          | 
+| "hut"          | 6968  | 246791    | 35          | 
+| "residential"  | 6     | 444       | 74          | 
+| "huts"         | 4     | 74        | 18          | 
+| "industrial"   | 1     | 328       | 328         | 
 
 
 ## Results for Inner Area
 
 **Landuse (ha)**
 
-|type| area|
-|----|----:|
-|"cemetery"|1.118|
-|"quarry"|0.836|
-|"industrial"|2.557|
-|"farmland"|12299.531|
-|"farmyard"|1.900|
-|"construction"|1.887|
-|"residential"|2170.163|
-|"forest"|61.253|
+| type           | area     | count | 
+|----------------|---------:|------:| 
+| "cemetery"     | 0.769    | 2     | 
+| "forest"       | 31.220   | 2     | 
+| "farmland"     | 1264.650 | 191   | 
+| "farmyard"     | 0.999    | 2     | 
+| "construction" | 1.887    | 1     | 
+| "residential"  | 547.097  | 23    | 
+
 
 
 **Roads (km)**
 
-|type| length|
-|----|----:|
-|"unclassified"|25.41|
-|"secondary"|49.87|
-|"track"|507.95|
-|"service"|4.95|
-|"path"|672.86|
-|"tertiary"|114.14|
-|"construction"|0.02|
-|"residential"|131.33|
+| type           | length (km) | 
+|----------------|------------:| 
+| "secondary"    | 14.50       | 
+| "unclassified" | 9.42        | 
+| "track"        | 75.32       | 
+| "service"      | 0.28        | 
+| "path"         | 26.78       | 
+| "tertiary"     | 11.40       | 
+| "residential"  | 47.98       | 
+
 
 **Buildings:**
 
-|type|count|total_sqm|average_sqm|
-|----|----:|----:|----:|
-|"house"|222|12490|56|
-|"shed"|12|306|25|
-|"ruin"|2|45|22|
-|"ruins"|137|3667|27|
-|"yes"|3994|315141|79|
-|"construction"|267|16603|62|
-|"hut"|6968|246791|35|
-|"residential"|6|444|74|
-|"huts"|4|74|18|
-|"industrial"|1|328|328|
+| type           | count | total_sqm | average_sqm | 
+|----------------|------:|----------:|------------:| 
+| "shed"         | 11    | 251       | 23          | 
+| "house"        | 1     | 56        | 56          | 
+| "industrial"   | 1     | 328       | 328         | 
+| "yes"          | 1834  | 180446    | 98          | 
+| "construction" | 95    | 9336      | 98          | 
+| "hut"          | 436   | 14043     | 32          | 
+| "residential"  | 2     | 255       | 127         | 
+
