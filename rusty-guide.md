@@ -149,6 +149,7 @@ GROUP BY building
 ## Results for large area
 
 **landuse**
+
 | type           | count | area (ha) | 
 |----------------|-------|-----------| 
 | "cemetery"     | 4     | 1.118     | 
@@ -161,6 +162,7 @@ GROUP BY building
 | "forest"       | 28    | 61.253    | 
 
 **Roads (km)**
+
 | type           | length (km) | 
 |----------------|-------------| 
 | "unclassified" | 25.41       | 
