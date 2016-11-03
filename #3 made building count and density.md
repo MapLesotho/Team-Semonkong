@@ -41,7 +41,7 @@ After using this method the area of my polygon is:
 |Acres	         |1412.04     |
 |Sq. Miles	     |2.21        |
 
-            #OR#
+            **OR**
 ```bash
 2.	To get the hectares you can install and use npm 
 ```
