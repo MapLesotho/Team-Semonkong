@@ -20,12 +20,12 @@ GROUP BY building
 |**building**   |**count**|
 |---------------|---------|
 |1.	Shed        |	11      |
-|2.	industrial	|1        |
+|2.	industrial 	|1        |
 |3.	construction|78       |
 |4.	yes	        |1394     | 
-|5.	hut       	|137      |
+|5.	hut        	|137      |
 |6.	residential |2        |
-|**	total **    |**1623** |
+|**total**      |**1623** |
  
  To calculate building density, I first had to calculate the area of the polygon: there are two ways in which I can find the area. I did both:
 
