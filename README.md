@@ -12,7 +12,7 @@
 - [ ] Buffer farmlands (to make sure we don't impact on farmlands as we facilitate population expansion) **STAN**
 - [ ] Amenities: the total number and the breakdown of the different types (for upgrading amenities upto tourism standards) **STAN**
 - [ ] Amenities density (to determine if more are needed or not and how many to upgrade) **STAN**
-- [ ] Quantum of landuse classes (to locate spaces for new developments e.g an informal space for a licenced market bazaar) **FIFI**
+- [x] Quantum of landuse classes (to locate spaces for new developments e.g an informal space for a licenced market bazaar) **FIFI**
 - [ ] Airport (some one please comment about this)
 - [x] Buildings: total and density (this will help with showing which buildings to remove from the town core for example)
 - [ ] Population (specify and document how you determined the population size and how you plan to increase it by 30%)
