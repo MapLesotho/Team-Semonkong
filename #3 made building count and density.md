@@ -10,7 +10,7 @@ There is a total of **[1623] mapped buildings for Semonkong**
 
 #A QUERY FOR BUILDINGS
 
-```bash
+```
 SELECT building, Count(*)
 FROM Semonkong_Inner_Boundary
 WHERE building is not null
