@@ -5,7 +5,7 @@ cd C:\Program Files\osm
 The download link I used is: download.geofabrik.de
 The date of the download is : 29th October 2016
 
-There is a total of **[1623] mapped buildings for Semonkong**
+There is a total of [1623] mapped buildings for Semonkong
 
 
 #A QUERY FOR BUILDINGS
@@ -37,9 +37,9 @@ After using this method the area of my polygon is:
 |---------------|------------|
 |Sq. Meters	    |5714331.44  |
 |Sq. Kilometers	|5.71        |
-|Sq. Feet     	|61508578.25 |
-|Acres	        |1412.04     |
-|Sq. Miles	    |2.21        |
+|Sq. Feet     	 |61508578.25 |
+|Acres	         |1412.04     |
+|Sq. Miles	     |2.21        |
 
             #OR#
 ```bash
