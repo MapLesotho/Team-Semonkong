@@ -1,16 +1,16 @@
 ```bash
 cd C:\Program Files\osm
 -c -d lesotho -K -H localhost --slim -P 5432 -S default.style 2910-lesotho-latest.osm.pbf
-b) The download link we used is: **download.geofabrik.de**
 
-c) The date of the download is : **29th October 2016**
+The download link I used is: download.geofabrik.de
+The date of the download is : 29th October 2016
 
 There is a total of **[1623] mapped buildings for Semonkong**
 
 
 #A QUERY FOR BUILDINGS
 
-```
+```bash
 SELECT building, Count(*)
 FROM Semonkong_Inner_Boundary
 WHERE building is not null
