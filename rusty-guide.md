@@ -69,21 +69,21 @@ create table semo_polys as (
         (select ST_SetSRID(the_geom, 900913) from semo_area1
         where semo_area1.id = 1)
     ) 
-    AND (building IS NOT NULL OR  landuse IS NOT NULL)
+    AND (building IS NOT NULL OR  landuse IS NOT NULL OR aeroway IS NOT NULL)
 )
 
 
 -- get the line cut out
 drop table semo_lines;
 create table semo_lines as (
-    select osm_id, highway, bridge, waterway, way
+    select osm_id, highway, bridge, waterway, aeroway, way
     from planet_osm_line as ol
     where ST_Intersects(
         ol.way, 
         (select ST_SetSRID(the_geom, 900913) from semo_area1
         where semo_area1.id = 1)
     ) 
-    AND (highway IS NOT NULL OR waterway IS NOT NULL)
+    AND (highway IS NOT NULL OR waterway IS NOT NULL OR aeroway IS NOT NULL)
 )
 ```
 
@@ -231,3 +231,39 @@ GROUP BY building
 | "hut"          | 436   | 14043     | 32          | 
 | "residential"  | 2     | 255       | 127         | 
 
+
+---
+
+## Run number 2 
+07/11/2016
+
+| landuse        | count | hectares | 
+|----------------|-------|----------| 
+| "cemetery"     | 2     | 0.769    | 
+| "forest"       | 2     | 30.379   | 
+| "farmland"     | 192   | 1273.081 | 
+| "farmyard"     | 2     | 1.042    | 
+| "construction" | 1     | 1.887    | 
+| "residential"  | 23    | 544.766  | 
+
+
+| class          | length(km) | 
+|----------------|------------| 
+| "secondary"    | 14.50      | 
+| "unclassified" | 9.42       | 
+| "track"        | 75.22      | 
+| "service"      | 0.28       | 
+| "path"         | 27.09      | 
+| "tertiary"     | 11.40      | 
+| "residential"  | 49.08      | 
+
+| class          | count | total (sqm) |  mean (sqm) | 
+|----------------|-------|-------------|-------------| 
+| "shed"         | 11    | 251         | 23          | 
+| "house"        | 1     | 56          | 56          | 
+| "industrial"   | 1     | 328         | 328         | 
+| "ruins"        | 2     | 87          | 43          | 
+| "yes"          | 1878  | 181678      | 97          | 
+| "construction" | 96    | 9446        | 98          | 
+| "hut"          | 435   | 13940       | 32          | 
+| "residential"  | 2     | 255         | 127         | 
